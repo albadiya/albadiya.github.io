@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AL BADIA INVESTMENT GROUP</title>
+    <title>AL BADIYA INVESTMENT GROUP</title>
 <link rel="icon" href="a6-rbg-p.png">
 <link rel="shortcut icon" href="a6-rbg-p.png">
 <link rel="apple-touch-icon" sizes="57x57" href="a6-rbg-p.png">
@@ -26,6 +26,22 @@
 <meta name="theme-color" content="#ffffff">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+<script>
+    var isNS = (navigator.appName == "PN") ? 1 : 0;
+    if(navigator.appName == "PN") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+    function mischandler(){
+    return false;
+    }
+    function mousehandler(e){
+    var myevent = (isNS) ? e : event;
+    var eventbutton = (isNS) ? myevent.which : myevent.button;
+    if((eventbutton==2)||(eventbutton==3)) return false;
+    }
+    document.oncontextmenu = mischandler;
+    document.onmousedown = mousehandler;
+    document.onmouseup = mousehandler;
+    </script>
 
 </head>
 <body>
