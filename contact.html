@@ -22,6 +22,21 @@
     <link href="css/albadiya.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var isNS = (navigator.appName == "PN") ? 1 : 0;
+        if(navigator.appName == "PN") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+        function mischandler(){
+        return false;
+        }
+        function mousehandler(e){
+        var myevent = (isNS) ? e : event;
+        var eventbutton = (isNS) ? myevent.which : myevent.button;
+        if((eventbutton==2)||(eventbutton==3)) return false;
+        }
+        document.oncontextmenu = mischandler;
+        document.onmousedown = mousehandler;
+        document.onmouseup = mousehandler;
+        </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
@@ -41,28 +56,28 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="indexbi.html">Home</a>
+                        <a class="nav-link " href="indexbi.html">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="about.html">About</a>
+                        <a class="nav-link " href="about.html">About</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="holding.html">Holding</a>
+                        <a class="nav-link " href="holding.html">Holding</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="portfolio.html">Portfolio</a>
+                        <a class="nav-link " href="portfolio.html">Portfolio</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_5">Service</a>
+                        <a class="nav-link " href="service.html">Service</a>
                     </li>
 
                     
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="contact.html">Contact</a>
+                        <a class="nav-link " href="contact.html">Contact</a>
                     </li>
 
                     <li class="nav-item">
